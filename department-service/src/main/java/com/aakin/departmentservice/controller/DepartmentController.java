@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("api/departments")
 public class DepartmentController {
     private final DepartmentService departmentService;
+
     @PostMapping
     public ResponseEntity<DepartmentDto> saveDepartment(@RequestBody  DepartmentRequest departmentRequest){
         return ResponseEntity.ok(departmentService.saveDepartment(departmentRequest));
